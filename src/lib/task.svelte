@@ -1,7 +1,7 @@
 <script>
-  // @ts-nocheck
   import { X, Pencil, Check } from "lucide-svelte";
-  let { text = $bindable(), id, status, removeTask, updateTask, columnId } = $props();
+  /** @type {{ text: string, id: number, removeTask:  (id: number) => void} }*/
+  let { text = $bindable(), id, removeTask } = $props();
   let editing = $state(false);
 </script>
 
